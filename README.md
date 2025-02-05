@@ -1,7 +1,7 @@
 # Liquid Galaxy Controller
 
 This project demonstrates how to upload and display custom KML files on a [Liquid Galaxy](https://github.com/LiquidGalaxy/liquid-galaxy) rig using Flutter and dartssh2(for the Task 2 for Liquid Galaxy for GSoC 2025). It handles:
-- **SSH Connection** and file upload via **SFTP**  
+- **SSH Connection**  
 - **Clearing existing KML** from Google Earth  
 - **Showing a logo overlay** on a specified screen  
 - **Sending KML from Flutter assets** to the rig  
@@ -24,7 +24,7 @@ In a typical Liquid Galaxy setup, you have one or more screens (lg1, lg2, lg3...
 
 ## 2. Key Features
 
-1. **SSH & SFTP** using [dartssh2](https://pub.dev/packages/dartssh2).
+1. **uses [dartssh2](https://pub.dev/packages/dartssh2)**.
 2. **KML Upload** from Flutter `assets/` or local temp file.
 3. **KML Control**: Clear, run, or append to `kmls.txt`.
 4. **Camera** movement: 
@@ -81,51 +81,8 @@ my_flutter_app/
 4. **Ensure** `sshpass` is installed on each screen (`lgX`) if you plan to use the poweroff/reboot commands that do `sshpass -p "$pw" ssh ...`.
 5. **Run** the app in **Android Studio** or **VS Code** (or via `flutter run`).
 
----
 
-## 5. Usage
-
-### 5.1 Connecting
-
-- On the **settings page**, store your LG IP, port, username, and password in `SharedPreferences`.
-- Call `SSHService.shared.connect()` to test the SSH connection.
-
-### 5.2 Sending a KML
-
-- **`sendKML1(context)`** or **`sendKML2(context)`** loads the KML from `assets/kml1.kml` or `assets/kml2.kml`.
-- Writes it to a temp file, then **uploads** via `kmlFileUpload`.
-- Appends the path to `kmls.txt`.
-- Moves the camera to the defined coordinates (using `flyToLookAt` or `flyToSearch`).
-
-### 5.3 Clearing KML
-
-```dart
-await lgService.cleanKML();
-```
-- Clears `kmls.txt` and stops tours by writing `exittour=true` if needed.
-
-### 5.4 Logo Overlay
-
-```dart
-await lgService.showLogo();
-await lgService.clearLogo();
-```
-
-- Writes a simple KML to `slave_3.kml` to show or remove a Liquid Galaxy–branded image overlay.
-
-### 5.5 System Actions
-
-```dart
-await lgService.reboot();
-await lgService.poweroff();
-await lgService.relaunch();
-```
-
-- Loops over `screenAmount` (default: 3) to issue `sshpass -p...` commands to each `lgX`.
-
-
-
-## 7. References
+## 5. References
 
 - **Liquid Galaxy**: <https://github.com/LiquidGalaxy/liquid-galaxy>  
 - **Dartssh2**: <https://pub.dev/packages/dartssh2>  
