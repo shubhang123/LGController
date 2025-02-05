@@ -132,5 +132,3 @@ await lgService.relaunch();
 - **SSH + SFTP** Example: Official Dart code samples for SFTP
 
 ---
-
-**Enjoy your Liquid Galaxy KML Project!** Feel free to customize coordinates, icons, or KML content to fit your specific use case. If you run into issues, check your console logs for SSH or SFTP errors, and verify your rig is configured to accept remote commands.
