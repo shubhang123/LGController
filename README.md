@@ -1,16 +1,3 @@
-Below is a **README.md** you can use for your Liquid Galaxy KML project. It explains:
-
-1. **Project Overview**  
-2. **Features**  
-3. **Folder Structure**  
-4. **Setup Instructions** (including SSH credentials, assets, etc.)  
-5. **Usage** (how to upload and run KML)  
-6. **Troubleshooting & Tips**  
-
-Feel free to edit or expand as you like.
-
----
-
 # Liquid Galaxy KML Project
 
 This project demonstrates how to upload and display custom KML files on a [Liquid Galaxy](https://github.com/LiquidGalaxy/liquid-galaxy) rig using Flutter and dartssh2. It handles:
