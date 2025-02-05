@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"
+     xmlns:gx="http://www.google.com/kml/ext/2.2"
+     xmlns:kml="http://www.opengis.net/kml/2.2"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+  <name>About Rajwada Palace</name>
+  <Style id="about_style">
+    <BalloonStyle>
+      <textColor>ffffffff</textColor>
+      <text>
+        <![CDATA[
+        <h1>Rajwada Palace</h1>
+        <h1>Indore, Madhya Pradesh</h1>
+        <img src="$cityImage" alt="Rajwada Palace" width="300" height="200" />
+        ]]>
+      </text>
+      <bgColor>ff15151a</bgColor>
+    </BalloonStyle>
+  </Style>
+  <Placemark id="ab">
+    <description></description>
+    <LookAt>
+      <longitude>75.8677</longitude>
+      <latitude>22.7196</latitude>
+      <heading>0</heading>
+      <tilt>0</tilt>
+      <range>200</range>
+    </LookAt>
+    <styleUrl>#about_style</styleUrl>
+    <gx:balloonVisibility>1</gx:balloonVisibility>
+    <Point>
+      <coordinates>75.8677,22.7196,0</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

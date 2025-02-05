@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Taj Mahal - Agra</name>
+    <Style id="fancyPlacemark">
+      <IconStyle>
+        <color>ff00ffff</color>
+        <scale>1.5</scale>
+        <Icon>
+          <href>https://maps.google.com/mapfiles/kml/shapes/square.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <color>ffffaa00</color>
+        <scale>1.2</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="colorfulPolygon">
+      <PolyStyle>
+        <color>7dff0000</color>
+        <outline>1</outline>
+      </PolyStyle>
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>2</width>
+      </LineStyle>
+    </Style>
+    <Placemark>
+      <name>Taj Mahal</name>
+      <description>one of the Seven Wonders of the World.</description>
+      <styleUrl>#fancyPlacemark</styleUrl>
+      <Point>
+        <coordinates>78.042068,27.173891,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Taj Mahal Area</name>
+      <description>A polygon marking the area around the Taj Mahal.</description>
+      <styleUrl>#colorfulPolygon</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              78.0418,27.1745,0
+              78.0424,27.1745,0
+              78.0424,27.1755,0
+              78.0418,27.1755,0
+              78.0418,27.1745,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>
