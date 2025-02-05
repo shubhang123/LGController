@@ -39,21 +39,29 @@ In a typical Liquid Galaxy setup, you have one or more screens (lg1, lg2, lg3...
 
 ```
 my_flutter_app/
-  ├─ assets/
-  │   ├─ kml1.kml            # KML for Singapore or any custom location
-  │   ├─ kml2.kml            # KML for Monaco / Eiffel Tower or any other place
-  │   ...
-  ├─ lib/
-  │   ├─ main.dart           # Entry point
-  │   ├─ services/
-  │   │   ├─ ssh_services.dart 
-  │   │   └─ lg_service.dart # The core logic for uploading KML, flying, etc.
-  │   ├─ screens/
-  │   │   └─ settings_page.dart
-  │   └─ widgets/
-  │       └─ home_page.dart  # Example UI for sending KML, showing logo, etc.
-  ├─ pubspec.yaml            # Dependencies + assets declaration
-  └─ README.md
+  ├── lib/
+  │   ├── main.dart                # Entry point for Flutter app
+  │   ├── models/
+  │   │   ├── config.dart          # Possibly storing app config or user credentials
+  │   │   └── kml_helper.dart      # Helper model or parser for KML
+  │   ├── pages/
+  │   │   ├── control/             # UI pages that control LG (buttons, commands)
+  │   │   │   └── control_page.dart
+  │   │   ├── manage/              # UI pages for management tasks (e.g. KML list, screen mgmt)
+  │   │   │   └── manage_page.dart
+  │   │   └── settings/            # UI pages for SSH settings or preferences
+  │   │       └── settings_page.dart
+  │   ├── services/
+  │   │   ├── ssh_service.dart     # Manages SSH connection (host, port, username, password)
+  │   │   └── lg_service.dart      # Liquid Galaxy logic (send KML, fly coords, power off, etc.)
+  │   └── widgets/
+  │       └── custom_button.dart   # Reusable widget examples
+  ├── assets/
+  │   ├── kml1.kml                 # Example KML for location 1
+  │   └── kml2.kml                 # Example KML for location 2
+  ├── pubspec.yaml                 # Flutter dependencies + assets references
+  └── README.md
+
 ```
 
 - **`assets/kml1.kml`** and **`assets/kml2.kml`** are sample KML files you can display on Liquid Galaxy.
