@@ -1,6 +1,6 @@
-# Liquid Galaxy KML Project
+# Liquid Galaxy Controller
 
-This project demonstrates how to upload and display custom KML files on a [Liquid Galaxy](https://github.com/LiquidGalaxy/liquid-galaxy) rig using Flutter and dartssh2. It handles:
+This project demonstrates how to upload and display custom KML files on a [Liquid Galaxy](https://github.com/LiquidGalaxy/liquid-galaxy) rig using Flutter and dartssh2(for the Task 2 for Liquid Galaxy for GSoC 2025). It handles:
 - **SSH Connection** and file upload via **SFTP**  
 - **Clearing existing KML** from Google Earth  
 - **Showing a logo overlay** on a specified screen  
